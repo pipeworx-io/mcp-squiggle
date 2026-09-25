@@ -1,20 +1,32 @@
 {
   "name": "@pipeworx/mcp-squiggle",
-  "version": "0.1.0",
-  "description": "AFL (Australian Football League) fixture, ladder, and crowd-sourced tips",
+  "version": "0.1.1",
+  "description": "Squiggle MCP — AFL fixture / results / tips.",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
+  "bin": {
+    "mcp-squiggle": "bin/cli.js"
+  },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "squiggle"],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pipeworx-io/mcp-squiggle"
+    "url": "git+https://github.com/pipeworx-io/mcp-squiggle.git"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
   "devDependencies": {
-    "typescript": "^5.7.0"
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-6ed2ea223c8ab4faa8e0b849ecdc57f4c7e2a7ff3341d6bcc79f951eb6b6967e",
+    "sourceCommit": "00c836ddeaecbdd581dcfb0fb1842efea104006e"
   }
 }
