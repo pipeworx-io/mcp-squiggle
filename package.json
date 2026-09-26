@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-squiggle",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Squiggle MCP — AFL fixture / results / tips.",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-6ed2ea223c8ab4faa8e0b849ecdc57f4c7e2a7ff3341d6bcc79f951eb6b6967e",
-    "sourceCommit": "00c836ddeaecbdd581dcfb0fb1842efea104006e"
+    "sourceHash": "v1-f736c34c1ac4da00f539b29a0d931c2d1e69ffdbee910ddc9239e7279e999f4c",
+    "sourceCommit": "d4a9636716f113458bd312e487c065f76548df8c"
   }
 }
