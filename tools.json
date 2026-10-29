@@ -1,0 +1,93 @@
+[
+  {
+    "name": "teams",
+    "description": "List all AFL teams tracked by Squiggle, optionally filtered to a specific year; returns team IDs, names, and abbreviations used across other tools.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "number"
+        }
+      }
+    }
+  },
+  {
+    "name": "games",
+    "description": "Fetch AFL fixture and results from Squiggle, filtered by year, round, and/or completion status; returns scores, venues, dates, and match IDs.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "number"
+        },
+        "round": {
+          "type": "number"
+        },
+        "complete": {
+          "type": "boolean",
+          "description": "Filter to completed games."
+        }
+      }
+    }
+  },
+  {
+    "name": "standings",
+    "description": "Fetch the AFL ladder (standings) for a given year and optional round from Squiggle; returns wins, losses, points, and percentage for each team.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "number"
+        },
+        "round": {
+          "type": "number"
+        }
+      }
+    }
+  },
+  {
+    "name": "sources",
+    "description": "List all registered AFL tipping sources in Squiggle (models, pundits, bookmakers) with their numeric IDs; use IDs with `tips` and `ladder`.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  },
+  {
+    "name": "tips",
+    "description": "Tips per game per source.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "number"
+        },
+        "round": {
+          "type": "number"
+        },
+        "source": {
+          "type": "number",
+          "description": "Source id (from /sources)."
+        }
+      }
+    }
+  },
+  {
+    "name": "ladder",
+    "description": "Projected ladder per source.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "number"
+        },
+        "round": {
+          "type": "number"
+        },
+        "source": {
+          "type": "number"
+        }
+      }
+    }
+  }
+]
